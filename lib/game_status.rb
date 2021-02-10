@@ -17,15 +17,14 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.each do |win|
-    p1 = win[0]
-    p2 = win[1]
-    p3 = win[2]
+    #p1 = win[0]
+    #p2 = win[1]
+    #p3 = win[2]
 
     ["X", "O"].each do |team|
       if win.all?(team)
         return win
       end
     end
-
     return false
   end
