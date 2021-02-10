@@ -22,9 +22,14 @@ def won?(board)
     p3 = win[2]
 
     ["X", "O"].each do |team|
-      if board[p1] == team && board[p2] == team && board[p3] == team
+      # if board[p1] == team && board[p2] == team && board[p3] == team
+      #   return win
+      # end
+
+      if win.all?(team)
         return win
       end
+
     end
   end
   return false
