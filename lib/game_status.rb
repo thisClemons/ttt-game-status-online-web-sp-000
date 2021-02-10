@@ -26,11 +26,14 @@ def won?(board)
       #   return win
       # end
 
-      if win.all?(team)
-        return win
+
+      win.each do |spot|
+        if board[spot] != team
+          return false
+        end
       end
 
     end
   end
-  return false
+  return win
 end
